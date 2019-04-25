@@ -1,0 +1,48 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+address, cite, dfn, em, var { font-style:normal; }
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+small{ font-size:12px; }
+ul, ol { list-style:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+sup { vertical-align:text-top; }
+sub{ vertical-align:text-bottom; }
+legend { color:#000; }
+fieldset, img { border:0; }
+button, input, select, textarea { font-size:100%; }
+table { border-collapse:collapse; border-spacing:0; }
+
+
+/*** 字体大小的换算 ***/
+
+@mixin font-dpr($font-size) {
+    font-size: $font-size;
+    [data-dpr="2"] & {
+      font-size: $font-size * 2;
+    }
+    [data-dpr="3"] & {
+      font-size: $font-size * 3;
+    }
+  }
+  
+  /*** 字体大小的换算  end***/
+  
+  div {
+    font-size: 12px; // 默认写上dpr为1的fontSize
+  }
+  
+  // [data-dpr="2"] div {
+  //   font-size: 24px;
+  // }
+  
+  // [data-dpr="3"] div {
+  //   font-size: 36px;
+  // }
+  
+  /*** rem的换算 ***/
+  
+  @function px2rem($px, $base-font-size: 75px) {
+    @return ($px / $base-font-size) * 1rem;
+  }
