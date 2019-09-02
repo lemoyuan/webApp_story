@@ -1,0 +1,64 @@
+html,body,#app {
+    // background-color: #F5F7F9;
+     width: 100%;
+     height: 100%;
+     font-family: "PingFang";
+}
+
+/*** 字体大小的换算 ***/
+
+@mixin font-dpr($font-size) {
+  font-size: $font-size;
+  [data-dpr="2"] & {
+    font-size: $font-size * 2;
+  }
+  [data-dpr="3"] & {
+    font-size: $font-size * 3;
+  }
+}
+
+/*** 字体大小的换算  end***/
+
+div {
+  font-size: 12px; // 默认写上dpr为1的fontSize
+}
+
+// [data-dpr="2"] div {
+//   font-size: 24px;
+// }
+
+// [data-dpr="3"] div {
+//   font-size: 36px;
+// }
+
+/*** rem的换算 ***/
+
+@function px2rem($px, $base-font-size: 75px) {
+  @return ($px / $base-font-size) * 1rem;
+}
+
+/*** rem的换算 end ***/
+h1, h2 {
+    font-weight: normal;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  a {
+    color: #8f8f8f;
+  }
+  .clear{
+    clear: both;
+  }
+  button{
+    border:none;
+  }
+  // .tab-top{
+  //     background-color: #F5F7F9;
+  //     margin-bottom:55px;
+  // }

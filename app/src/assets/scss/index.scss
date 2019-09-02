@@ -1,0 +1,47 @@
+@import "reset.scss";
+.mess{
+    height: 100px;
+    width: 10rem;
+    // font-size:20px;
+}
+.el-dialog__header {
+    background: linear-gradient(to right, #fd5d5e , #ee4343);
+    height: px2rem(80px);
+    padding: 0 20px 0!important;
+    .el-dialog__headerbtn {
+        position: absolute;
+        top: px2rem(20px);
+        i{
+            color:#fff!important;
+        }
+    }
+}
+
+
+.el-dialog__title{
+    color:#fff!important;
+    line-height:px2rem(80px);
+    font-size:  px2rem(30px)!important;
+}
+.dialog-footer{
+    text-align: center!important;
+}
+.el-dialog__body{
+    font-size:  px2rem(30px)!important;
+    text-align: left;
+    padding: px2rem(50px) px2rem(20px) px2rem(20px);
+    .mint-cell-text{
+        font-size:  px2rem(30px)!important;
+    }
+    .mint-cell-value{
+        font-size:  px2rem(30px)!important;
+    }
+    p{
+            font-size: px2rem(30px);
+            font-family: "PingFang";
+            color: rgb(68, 68, 68);
+    }
+}
+.el-dialog__footer{
+    padding: px2rem(10px) px2rem(20px) px2rem(20px);
+}
